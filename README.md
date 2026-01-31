@@ -1,4 +1,4 @@
-# News & Events Portal (Drupal 10)
+# News & Events Portal (Drupal 11)
 
 A dynamic news and events portal built with **Drupal 11**, featuring categorized content, a RESTful API, and a custom front-end integration. This project demonstrates content modeling, custom module development, and the consumption of external APIs (Laravel).
 
@@ -43,7 +43,7 @@ A 2-column layout implemented via a custom Drupal Controller and Twig template:
 
 - Composer
 - Local PHP environment (e.g., MAMP, XAMPP, or DDEV)
-- Laravel server running the Events API (typically on `http://127.0.0.1:8000`)
+- Laravel server running the Events API (typically on `http://127.0.0.1:8000`), check [event_manager](https://github.com/NikEmman/laravel_event_manager) repo
 
 ### 1. Clone and Install Dependencies
 
@@ -54,11 +54,7 @@ composer install
 
 ```
 
-### 2. Configure Database
-
-Update your `web/sites/default/settings.php` with your local database credentials.
-
-### 3. Enable Custom Modules & Theme
+### 2. Enable Custom Modules & Theme
 
 ```bash
 # Enable required contrib and custom modules
@@ -69,6 +65,16 @@ vendor/bin/drush theme:enable bootstrap_barrio
 vendor/bin/drush config-set system.theme default bootstrap_barrio -y
 
 ```
+
+### 3. Start the server & initial setup
+
+```bash
+# Start the local server
+php -S localhost:8888 -t web
+
+```
+
+Then visit `http://localhost:8888/` and go through setting up db and admin
 
 ### 4. Create Content & Cache Clear
 
