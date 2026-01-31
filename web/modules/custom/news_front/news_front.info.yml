@@ -1,0 +1,5 @@
+name: "News Front Page"
+type: module
+description: "Custom 2-column front page for the challenge."
+core_version_requirement: ^10 || ^11
+package: Custom

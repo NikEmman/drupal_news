@@ -1,0 +1,7 @@
+name: "Events Display"
+type: module
+description: "Fetches and displays upcoming events from the Laravel API."
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:block

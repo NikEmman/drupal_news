@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function news_front_theme($existing, $type, $theme, $path) {
+  return [
+    'news_front_template' => [
+      'variables' => [
+        'featured_node' => NULL,
+      ],
+    ],
+  ];
+}

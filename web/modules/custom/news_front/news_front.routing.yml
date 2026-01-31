@@ -1,0 +1,7 @@
+news_front.front_page:
+  path: "/front-news"
+  defaults:
+    _controller: '\Drupal\news_front\Controller\NewsFrontController::content'
+    _title: "News & Events Portal"
+  requirements:
+    _permission: "access content"
