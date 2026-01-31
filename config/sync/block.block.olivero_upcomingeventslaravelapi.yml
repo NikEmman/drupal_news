@@ -1,0 +1,20 @@
+uuid: d626dd02-6b76-4bfd-bd9c-ff5c0b14d12d
+langcode: en
+status: true
+dependencies:
+  module:
+    - events_display
+  theme:
+    - olivero
+id: olivero_upcomingeventslaravelapi
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: events_display_block
+settings:
+  id: events_display_block
+  label: 'Upcoming Events (Laravel API)'
+  label_display: visible
+  provider: events_display
+visibility: {  }
