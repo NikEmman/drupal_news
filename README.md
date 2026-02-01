@@ -51,38 +51,35 @@ A 2-column layout implemented via a custom Drupal Controller and Twig template:
 git clone git@github.com:NikEmman/drupal_news.git
 cd drupal_news
 composer install
-
 ```
 
-### 2. Enable Custom Modules & Theme
-
-```bash
-# Enable required contrib and custom modules
-vendor/bin/drush en news_front events_display better_exposed_filters views_infinite_scroll -y
-
-# Set the theme
-vendor/bin/drush theme:enable bootstrap_barrio
-vendor/bin/drush config-set system.theme default bootstrap_barrio -y
-
-```
-
-### 3. Start the server & initial setup
+### 2. Start the server & initial setup
 
 ```bash
 # Start the local server
 php -S localhost:8888 -t web
-
 ```
 
 Then visit `http://localhost:8888/` and go through setting up db and admin
 
-### 4. Create Content & Cache Clear
+### 3. Import data
 
-Create a few "Article" nodes and ensure at least one is marked as "Featured."
+Run the following command to import data, paths, pages. Replace `YOUR_DB_NAME` with the db name you set at the previous step
+
+```bash
+mysql -u root -p YOUR_DB_NAME < db_backup.sql
+```
+
+Then clear cache by running:
 
 ```bash
 vendor/bin/drush cr
+```
 
+### 4. Run the server again
+
+```bash
+php -S localhost:8888 -t web
 ```
 
 ---
