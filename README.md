@@ -60,7 +60,7 @@ composer install
 php -S localhost:8888 -t web
 ```
 
-Then visit `http://localhost:8888/` and go through setting up db and admin
+Then visit `http://localhost:8888/` and go through setting up db and admin. When complete, stop the server with `ctr+c`
 
 ### 3. Import data
 
