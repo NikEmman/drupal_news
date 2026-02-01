@@ -1,9 +1,0 @@
-uuid: 548f32a6-7b9d-463d-9fed-09b0bb93ee14
-langcode: en
-status: true
-dependencies: {  }
-name: Categories
-vid: categories
-description: null
-weight: 0
-new_revision: false
